@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    <body>
+
+        <header>
+            <div class="navbar_logo">
+            </div>
+                <div class ='icons'>
+                <div class="cloud_icon"><a href="https://www.meaningcloud.com" target="_blank"></a></div>
+                <div class="node_icon"><a href="https://nodejs.org/en/" target="_blank"></a></div>
+            </div>
+        </header>
+
+        <main>
+            <div class= "heading">
+            <h1>Evaluate a News Article with Natural Language Processings</h1>
+            </div>
+            
+                <section>
+                    <div class="content">
+                        <form class="form_style" onsubmit="Client.handleSubmit(event)">
+                            <input id="name" type="text" name="input[url]" placeholder="Please enter URL">
+                            <input id="submit" type="submit" value="submit">
+                        </form>
+                    </div>    
+                <section>
+
+                <section>
+                    <div id = "form_title">
+                        <h2>Document analysis</h2>
+                    </div>
+                    <div id="results">
+                        <div class="results__container">
+                            <h3>Score tag</h3>
+                            <div class="score_tag"></div>
+                            <h3>Agreement</h3>
+                            <div class="agreement"></div>
+                            <h3>Subjectivity</h3>
+                            <div class="subjectivity"></div>
+                            <h3>Confidence</h3>
+                            <div class="confidence"></div>
+                            <h3>Irony</h3>
+                            <div class="irony"></div>
+                        </div>
+                    </div>       
+                </section> 
+        </main>
+
+        <script>
+            // Check that service workers are supported
+          // if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+               // window.addEventListener('load', () => {
+               //     navigator.serviceWorker.register('/service-worker.js');
+               // });
+           // }
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+            }
+           </script>
+<footer class="footer">
+    <ul class="footer-nav">
+        <li><a href="https://www.meaningcloud.com/" target="_blank">MeaningCloud</a></li>
+        <li><a href="https://nodejs.org/en/" target="_blank">Node.js®</a></li>
+      </ul>
+      <p>
+        This webpage was created for the course Udacity No copyrights here.<br>
+      </p>
+      <p>
+        Build on August 2020.
+      </p>
+</body>
+</footer>
+</html>

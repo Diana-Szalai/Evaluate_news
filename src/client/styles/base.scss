@@ -1,0 +1,40 @@
+$first-color: #518346;
+$second-color: #80bc58;
+$white-color: #ffffff;
+$black-color: #000000a6;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    background-image: url(../views/photos/notebook.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+ h1 {
+    display: flex;
+    justify-content: center;
+    color: $white-color;
+    font-size: 32px;
+    text-shadow: 2px 2px 5px black;
+    display: flex;
+    justify-content: center;
+    text-decoration: wavy;;
+    align-self: start;
+    padding: 2rem ;
+    
+    }
+
+    

@@ -1,0 +1,33 @@
+$first-color: #518346;
+$second-color: #80bc58;
+$white-color: #ffffff;
+$black-color: #000;
+
+header {
+    
+    display: flex;
+    widows: 100%;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background-color: $white-color;
+    border-bottom: 1px solid #518346;
+    
+
+    .navbar_logo{
+        background: url(../views/photos/logo.png) no-repeat center center/cover;
+        height: 4rem;
+        width: 10rem;
+    }
+    .cloud_icon{
+        display: inline-flex;
+        background: url(../views/photos/img-cloud.jpg) no-repeat center center/cover;
+        height: 4rem;
+        width: 10rem;
+    }
+    .node_icon{
+        display: inline-flex;
+        background: url(../views/photos/img-node.jpg) no-repeat center center/cover;
+        height: 4rem;
+        width: 10rem;
+    }
+}
