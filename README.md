@@ -21,5 +21,5 @@ Style-Guide
 - ```npm start``` to start the app
 - this app runs on localhost:8080 
 ## Image of the app
-<img src="https://github.com/Diana-Szalai/Evaluate_news/blob/master/src/client/views/photos/project_image.jpg" width="426" height="660" />
+<img src="https://github.com/Diana-Szalai/Evaluate_news/blob/master/src/client/views/photos/project_image.jpg" width="183" height="95" />
 
