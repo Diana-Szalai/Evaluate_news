@@ -6,19 +6,20 @@ export async function handleSubmit(event) {
     let text;
     
     handleURL(formText);
-    //if (formText) {
-    //    text = {
-    //        title: formText,
-    //        type: "url",
-    //    };
-    //} else {
-    //    text = {
-    //        title: formText,
-    //        type: "txt",
-    //    };
-    //}
+    if (formText) {
+        text = {
+            title: formText,
+            type: "url",
+        };
+    } else {
+        text = {
+            title: formText,
+            type: "txt",
+        };
+    }
+    
     console.log("::: Form Submitted :::")
-            await fetch('http://localhost:5051/test', {
+            await fetch('http://localhost:8081/test', {
             method: 'POST',
             mode: "no-cors",
             headers: {
@@ -26,15 +27,15 @@ export async function handleSubmit(event) {
             },
             body: text.title 
         });
-        const sentiment = await fetch('http://localhost:5051/sentiment');
+        const sentiment = await fetch('http://localhost:8081/sentiment');
         let newData = await sentiment.json();
         try {
             console.log(newData);
-            document.querySelector('.cityLat').textContent =newData.cityLat;
-            document.querySelector('.cityLong').textContent =newData.cityLong;
-            document.querySelector('.country').textContent = newData.country;
-            document.querySelector('.population').textContent = newData.population;
-            document.querySelector('.countryCode').textContent = newData.countryCode;
+            document.querySelector('.score_tag').textContent =newData.score_tag;
+            document.querySelector('.agreement').textContent =newData.agreement;
+            document.querySelector('.subjectivity').textContent = newData.subjectivity;
+            document.querySelector('.confidence').textContent = newData.confidence;
+            document.querySelector('.irony').textContent = newData.irony;
         } catch (error) {
             console.log(error);
         }
